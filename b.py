@@ -21,4 +21,19 @@ def is_valid_brackets(input_str):
 
 # Example usage
 input_str = "()(()"
-print(is_valid_brackets(input_str))
+print(is_valid_brackets(input_str))  
+# stack
+Stack=[]
+input_str = "()(()"
+for char in input_str:
+    if char == "(":
+        Stack.append(char)
+    if char == ")":
+        Stack.pop(char)
+
+length=len(Stack)
+
+if length !=0 :
+    print("False")
+else:
+    print("True")
